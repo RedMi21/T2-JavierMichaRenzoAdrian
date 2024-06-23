@@ -1,0 +1,21 @@
+<div>
+    <h2>Calculadora de Descuento</h2>
+    <form (ngSubmit)="calculateTotal()">
+      <mat-form-field>
+        <mat-label>Precio Unitario</mat-label>
+        <input matInput type="number" [(ngModel)]="unitPrice" name="unitPrice" required>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Cantidad</mat-label>
+        <input matInput type="number" [(ngModel)]="quantity" name="quantity" required>
+      </mat-form-field>
+  
+      <button mat-raised-button type="submit">Calcular</button>
+    </form>
+  
+    <div *ngIf="totalPrice !== null">
+      <h3>Total a Pagar: {{ totalPrice | currency:'USD':'symbol' }}</h3>
+    </div>
+  </div>
+  

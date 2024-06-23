@@ -9,7 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { provideRouter } from '@angular/router';
-import { routes } from './app/app-routing.module';
+import { AppRoutingModule } from './app/app-routing.module';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
